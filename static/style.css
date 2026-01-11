@@ -1,0 +1,144 @@
+:root {
+    --bg: #121212;
+    --panel: #1e1e1e;
+    --card: #242424;
+    --text: #eaeaea;
+    --muted: #aaaaaa;
+    --accent: #4da6ff;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+}
+
+h1, h2 {
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 10px;
+    width: 130px;
+    padding: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+.card.selected {
+    outline: 2px solid var(--accent);
+    box-shadow: 0 0 0 2px rgba(77,166,255,0.4);
+}
+
+.card-name {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.card-age {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.card-id {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Accent par type */
+
+.type-human {
+    border-left: 4px solid #4da6ff;
+}
+
+.type-food {
+    border-left: 4px solid #7ddc7d;
+}
+
+.type-resource {
+    border-left: 4px solid #dcbf7d;
+}
+
+.type-building {
+    border-left: 4px solid #b57ddc;
+}
+
+.type-nature {
+    border-left: 4px solid #6fbf8f;
+}
+
+.type-tool {
+    border-left: 4px solid #aaaaaa;
+}
+
+.type-element {
+    border-left: 4px solid #ff7d7d;
+}
+
+
+.actions {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+input {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0.45rem;
+    width: 110px;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+button {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border 0.15s ease;
+}
+
+button:hover {
+    background: #2a2a2a;
+    border-color: var(--accent);
+}

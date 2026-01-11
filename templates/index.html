@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge to victory</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<div class="cards">
+{% for card in cards %}
+    <div class="card type-{{ card.type }}">
+        <div class="card-name">{{ card.name }}</div>
+        <div class="card-age">Âge : {{ card.age }}</div>
+        <div class="card-id">#{{ card.id }}</div>
+    </div>
+{% endfor %}
+</div>
+
+
+<div class="actions">
+    <form method="post" action="/combine">
+        <input name="card1" placeholder="ID carte 1">
+        <input name="card2" placeholder="ID carte 2">
+        <button>Combiner</button>
+    </form>
+
+    <form method="post" action="/tick">
+        <button>Passer le temps</button>
+    </form>
+</div>
+
+</body>
+</html>

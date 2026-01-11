@@ -1,0 +1,31 @@
+{
+  "cards": [
+    { "name": "Villageois", "type": "human", "tags": ["worker"] },
+    { "name": "Enfant", "type": "human", "tags": ["human"] },
+    { "name": "Ancien", "type": "human", "tags": ["human"] },
+
+    { "name": "Baie", "type": "food", "tags": ["food"] },
+    { "name": "Baie pourrie", "type": "food", "tags": ["waste"] },
+    { "name": "Viande", "type": "food", "tags": ["food"] },
+    { "name": "Poisson", "type": "food", "tags": ["food"] },
+
+    { "name": "Bois", "type": "resource", "tags": ["wood"] },
+    { "name": "Pierre", "type": "resource", "tags": ["stone"] },
+    { "name": "Planche", "type": "resource", "tags": ["wood"] },
+    { "name": "Brique", "type": "resource", "tags": ["stone"] },
+
+    { "name": "Maison", "type": "building", "tags": ["housing"] },
+    { "name": "Atelier", "type": "building", "tags": ["craft"] },
+    { "name": "Ferme", "type": "building", "tags": ["food"] },
+    { "name": "Entrepôt", "type": "building", "tags": ["storage"] },
+
+    { "name": "Arbre", "type": "nature", "tags": ["wood", "grow"] },
+    { "name": "Champ", "type": "nature", "tags": ["food", "grow"] },
+    { "name": "Rivière", "type": "nature", "tags": ["water"] },
+
+    { "name": "Hache", "type": "tool", "tags": ["tool"] },
+    { "name": "Pioche", "type": "tool", "tags": ["tool"] },
+
+    { "name": "Feu", "type": "element", "tags": ["fire"] }
+  ]
+}
