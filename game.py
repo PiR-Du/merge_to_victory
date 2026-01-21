@@ -1,17 +1,38 @@
 from cards import Card
-from rules import COMBINATIONS, AGING_RULES
+from rules import COMBINATIONS, AGING_RULES, LIEU
+import json
+import random
 
 class Game:
     def __init__(self):
+
+        self.card_defs = self.load_cards()
+
         self.cards = []
         self.next_id = 1
-        self.add_card("Villageois", "human")
-        self.add_card("Bois", "resource")
-        self.add_card("Baie", "food")
+        self.add_card("Forêt")
+        self.add_card("Lac")
+        self.add_card("Villageois")
+        self.add_card("Villageois")
         self.status = "EN COURS"
 
-    def add_card(self, name, type_):
-        self.cards.append(Card(self.next_id, name, type_))
+    def load_cards(self):
+        with open("cards.json", encoding="utf-8") as f:
+            data = json.load(f)["cards"]
+
+        return {card["name"]: card for card in data}
+
+
+    def add_card(self, name):
+        labels = self.card_defs[name]
+
+        self.cards.append(
+            Card(
+                id=self.next_id,
+                name=name,
+                type=labels["type"],
+            )
+        )
         self.next_id += 1
 
     def get_card(self, card_id):
@@ -23,11 +44,22 @@ class Game:
 
         key = frozenset([c1.name, c2.name])
         if key in COMBINATIONS:
-            result = COMBINATIONS[key]
+            results = COMBINATIONS[key]
             self.cards.remove(c1)
             self.cards.remove(c2)
-            self.add_card(result, "crafted")
-            
+            for result in results :
+                self.add_card(result)
+            # Bonus
+            if c1.type == "lieu" :
+                for bonus in LIEU[c1.name] :
+                    chance = random.randrange(5)
+                    if chance == 1 :
+                        self.add_card(bonus, )
+            if c2.type == "lieu" :
+                for bonus in LIEU[c2.name] :
+                    chance = random.randrange(5)
+                    if chance == 1 :
+                        self.add_card(bonus, "crafted")
 
     def tick(self):
         for card in self.cards[:]:

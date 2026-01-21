@@ -100,6 +100,19 @@ h2 {
     border-left: 4px solid #ff7d7d;
 }
 
+.category {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+
 
 .actions {
     position: fixed;

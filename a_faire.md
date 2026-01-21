@@ -1,0 +1,1 @@
+Pouvoir faire un merge par villageois actif avant de passer le temps 

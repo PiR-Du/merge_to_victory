@@ -1,5 +1,9 @@
 {
   "cards": [
+    { "name": "Forêt", "type": "lieu", "tags": ["lieu"] },
+    { "name": "Lac", "type": "lieu", "tags": ["lieu"] },
+    { "name": "Eau", "type": "resource", "tags": ["resource"] },
+
     { "name": "Villageois", "type": "human", "tags": ["worker"] },
     { "name": "Enfant", "type": "human", "tags": ["human"] },
     { "name": "Ancien", "type": "human", "tags": ["human"] },

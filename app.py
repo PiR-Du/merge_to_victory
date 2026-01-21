@@ -4,9 +4,19 @@ from game import Game
 app = Flask(__name__)
 game = Game()
 
+from collections import defaultdict
+
 @app.route("/")
 def index():
-    return render_template("index.html", cards=game.cards)
+    cards_by_type = defaultdict(list)
+    for card in game.cards:
+        cards_by_type[card.type].append(card)
+
+    return render_template(
+        "index.html",
+        cards_by_type=cards_by_type,
+    )
+
 
 @app.route("/combine", methods=["POST"])
 def combine():

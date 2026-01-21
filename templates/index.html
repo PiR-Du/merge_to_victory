@@ -6,15 +6,24 @@
 </head>
 <body>
 
-<div class="cards">
-{% for card in cards %}
-    <div class="card type-{{ card.type }}">
-        <div class="card-name">{{ card.name }}</div>
-        <div class="card-age">Âge : {{ card.age }}</div>
-        <div class="card-id">#{{ card.id }}</div>
-    </div>
+{% for type, cards in cards_by_type.items() %}
+    <section class="category">
+        <h2 class="category-title">{{ type|capitalize }}</h2>
+
+        <div class="cards">
+        {% for card in cards %}
+            <form method="post" action="/select/{{ card.id }}">
+                <button class="card type-{{ card.type }} {% if card.id in selected %}selected{% endif %}">
+                    <div class="card-name">{{ card.name }}</div>
+                    <div class="card-age">Âge : {{ card.age }}</div>
+                    <div class="card-id">#{{ card.id }}</div>
+                </button>
+            </form>
+        {% endfor %}
+        </div>
+    </section>
 {% endfor %}
-</div>
+
 
 
 <div class="actions">
