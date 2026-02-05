@@ -1,35 +1,33 @@
 {
   "cards": [
-    { "name": "Forêt", "type": "lieu", "tags": ["lieu"] },
-    { "name": "Lac", "type": "lieu", "tags": ["lieu"] },
-    { "name": "Eau", "type": "resource", "tags": ["resource"] },
+    { "name": "Forêt", "type": "lieu", "tags": ["nature", "bois"] },
+    { "name": "Montagne", "type": "lieu", "tags": ["nature", "pierre"] },
+    { "name": "Lac", "type": "lieu", "tags": ["eau"] },
+    { "name": "Champ", "type": "lieu", "tags": ["agriculture"] },
+    { "name": "Potager", "type": "lieu", "tags": ["agriculture", "nourriture"] },
+    { "name": "Pré", "type": "lieu", "tags": ["animal", "agriculture"] },
 
-    { "name": "Villageois", "type": "human", "tags": ["worker"] },
-    { "name": "Enfant", "type": "human", "tags": ["human"] },
-    { "name": "Ancien", "type": "human", "tags": ["human"] },
+    { "name": "Villageois", "type": "humain", "tags": ["worker", "humain"] },
+    { "name": "Bébé", "type": "humain", "tags": ["humain"] },
 
-    { "name": "Baie", "type": "food", "tags": ["food"] },
-    { "name": "Baie pourrie", "type": "food", "tags": ["waste"] },
+    { "name": "Lapin", "type": "animal", "tags": ["animal", "nourriture"] },
+    { "name": "Vache", "type": "animal", "tags": ["animal", "nourriture"] },
+    { "name": "Poule", "type": "animal", "tags": ["animal", "nourriture"] },
+    { "name": "Poisson", "type": "animal", "tags": ["animal", "nourriture"] },
+
+    { "name": "Baie", "type": "food", "tags": ["food", "cueillette"] },
+    { "name": "Lait", "type": "food", "tags": ["food"] },
+    { "name": "Œuf", "type": "food", "tags": ["food"] },
     { "name": "Viande", "type": "food", "tags": ["food"] },
-    { "name": "Poisson", "type": "food", "tags": ["food"] },
 
     { "name": "Bois", "type": "resource", "tags": ["wood"] },
     { "name": "Pierre", "type": "resource", "tags": ["stone"] },
-    { "name": "Planche", "type": "resource", "tags": ["wood"] },
-    { "name": "Brique", "type": "resource", "tags": ["stone"] },
+    { "name": "Planche", "type": "resource", "tags": ["wood", "craft"] },
+    { "name": "Eau", "type": "resource", "tags": ["water"] },
 
-    { "name": "Maison", "type": "building", "tags": ["housing"] },
-    { "name": "Atelier", "type": "building", "tags": ["craft"] },
-    { "name": "Ferme", "type": "building", "tags": ["food"] },
-    { "name": "Entrepôt", "type": "building", "tags": ["storage"] },
+    { "name": "Maison", "type": "batiment", "tags": ["housing"] },
 
-    { "name": "Arbre", "type": "nature", "tags": ["wood", "grow"] },
-    { "name": "Champ", "type": "nature", "tags": ["food", "grow"] },
-    { "name": "Rivière", "type": "nature", "tags": ["water"] },
-
-    { "name": "Hache", "type": "tool", "tags": ["tool"] },
-    { "name": "Pioche", "type": "tool", "tags": ["tool"] },
-
-    { "name": "Feu", "type": "element", "tags": ["fire"] }
+    { "name": "Feu", "type": "resource", "tags": ["fire"] }
+    
   ]
 }

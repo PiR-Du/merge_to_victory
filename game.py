@@ -54,12 +54,12 @@ class Game:
                 for bonus in LIEU[c1.name] :
                     chance = random.randrange(5)
                     if chance == 1 :
-                        self.add_card(bonus, )
+                        self.add_card(bonus )
             if c2.type == "lieu" :
                 for bonus in LIEU[c2.name] :
                     chance = random.randrange(5)
                     if chance == 1 :
-                        self.add_card(bonus, "crafted")
+                        self.add_card(bonus)
 
     def tick(self):
         for card in self.cards[:]:
